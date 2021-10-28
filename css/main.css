@@ -1,0 +1,16 @@
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.header-1{
+    width: 100%;
+    background-color: #686868;
+    height: 70px;
+}
+main{
+    height: 980px;
+    position: relative;
+    margin: 0 auto;
+}
