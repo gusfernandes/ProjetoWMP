@@ -14,3 +14,13 @@ main{
     position: relative;
     margin: 0 auto;
 }
+form{
+text-align: center;
+margin-top: 20px;
+}
+input[type="text"]{
+    border: 0.5px solid #686868;
+    width: 250px;
+    height: 25px;
+    padding-left: 10px;
+}
