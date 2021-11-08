@@ -7,7 +7,7 @@ body{
 img{
     display: block;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 120px;
 }
 h2{color:#FFF;
     text-align: center;}
@@ -41,3 +41,29 @@ input[type="submit"]{
         color: #FFF;
         cursor: pointer;
     }
+input[type="date"]{
+    border: 1px solid #686868;
+    width: 250px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+input[type="name"]{
+    border: 1px solid #686868;
+    width: 250px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+input[type="email"]{
+    border: 1px solid #686868;
+    width: 250px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+p{
+    color: #FFF;
+    text-align: center;
+}
+a{text-decoration:none; color: #722f37;}
