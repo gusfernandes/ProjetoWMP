@@ -1,5 +1,5 @@
 <?php 
-    $base="dbwmp";
+    $base="bdwmp";
     error_reporting(E_ALL ^ E_DEPRECATED);
     $connect = mysqli_connect("localhost","etecia","123456") or die("Não foi possivel conectar ao servidor");
     $db = mysqli_select_db($connect,$base) or die("Não foi possivel conectar ao banco de dados");

@@ -34,7 +34,6 @@ CREATE TABLE `usuario` (
   `usu_nick` varchar(20) NOT NULL,
   `usu_pass` varchar(20) NOT NULL,
   `usu_idade` int(11) NOT NULL,
-  `usu_date` date NOT NULL DEFAULT current_timestamp(),
   `usu_foto` mediumblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

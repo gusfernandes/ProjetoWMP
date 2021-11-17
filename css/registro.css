@@ -1,8 +1,9 @@
 body{
-    width: 100%;
-    height: 100%;
+
     background-color: rgb(12, 12, 12);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image:url('../img/fundocad.png');
+    background-repeat: no-repeat;
 }
 img{
     display: block;
@@ -10,55 +11,62 @@ img{
     margin-top: 120px;
 }
 h2{color:#FFF;
+    margin-top: 180px;
     text-align: center;}
 form{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     }
 input[type="username"]{
     border: 1px solid #686868;
+    border-radius: 0.25rem;
     width: 250px;
-    height: 25px;
+    height: 35px;
     padding-left: 10px;
     margin-top: 20px;
     }
 input[type="password"]{
     border: 1px solid #686868;
+    border-radius: 0.25rem;
     width: 250px;
-    height: 25px;
+    height: 35px;
     padding-left: 10px;
     margin-top: 20px;
     }
 input[type="submit"]{
     border: none;
     width: 250px;
+    border-radius: 0.25rem;
     height: 25px;
     padding-left: 10px;
     margin-top: 20px;
     }
     input[type="submit"]:hover{
-        background-color: #722f37;
+        background-color: #000;
         color: #FFF;
         cursor: pointer;
     }
 input[type="date"]{
     border: 1px solid #686868;
+    border-radius: 0.25rem;
     width: 250px;
-    height: 25px;
+    height: 35px;
     padding-left: 10px;
     margin-top: 20px;
 }
 input[type="name"]{
     border: 1px solid #686868;
+    border-radius: 0.25rem;
     width: 250px;
-    height: 25px;
+    height: 35px;
     padding-left: 10px;
     margin-top: 20px;
 }
 input[type="email"]{
     border: 1px solid #686868;
+    border-radius: 0.25rem;
     width: 250px;
-    height: 25px;
+    height: 35px;
     padding-left: 10px;
     margin-top: 20px;
 }
@@ -66,4 +74,16 @@ p{
     color: #FFF;
     text-align: center;
 }
-a{text-decoration:none; color: #722f37;}
+a{text-decoration:none; color: #000;}
+
+h5{
+    font-size: 91%;
+    color: #FFF;
+    text-align: center;
+}
+.cad{
+    text-align: center;
+}
+.form-group{
+
+}

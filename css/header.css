@@ -1,0 +1,27 @@
+body{
+    background-color: #3c3a3a;
+}
+img[name=logo]{
+    float: left;
+}
+.form-inline .form-control {
+    display: inline-block;
+    margin-left: -141%;
+    vertical-align: middle;
+    /* margin-right: 41%; */
+}
+.btn-outline-dark {
+    margin-right: 1%;
+    color: #343a40;
+    border-color: #343a40;
+}
+.link{
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+.link:hover{
+    color: #FFF;
+    text-decoration: none;
+    background-color: transparent;
+}
