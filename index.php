@@ -13,18 +13,15 @@ include("header.php");
 </head>
 <body>
     <div class="container">
-    <header class="menu-principal">
-        <main>
-        <div class="header-1">
-            <div class="logo">
-            
-            </div>
-            <div class="games">
-            </div>
-        </div>
-    </main>
-    </header>
-    </div>
+    <div class="form-group" id="publicar">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva algo aqui..."></textarea>
+    <input type="submit" value="Publicar" id="butpub">
+    <label for="file-input">
+        <img src="./img/clip.png" alt="" srcset="">
+    </label>
+    <input type="file" id="file-input" name="file" hidden>
+  </div>
+  </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
