@@ -1,45 +1,14 @@
 <?php 
 include("header.php");
 
-$pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
-
-    if(isset($_POST['publish'])){
-        if ($_FILES["file"]["error"] > 0) {
-            $texto = $_POST["texto"];
-            $hoje = date("Y-m-d");
-
-            if($texto == null){
-                Echo"<p>Escreva Algo!</p>";
-            }else {
-                $query = "INSERT INTO pubs (user, texto, dataa) VALUES ('$login_cookie','$texto','$hoje')";
-                $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
-                if ($data) {
-                    header("location ./");
-                }else{
-                    Echo"<p>Algo deu errado!</p>";
-                }
-            }
-        }else {
-            $a = rand(0,10000000);
-            $img = $n.$_FILES["file"]["name"];
-            move_uploaded_file($_FILES["file"]["tmp_name"], "upload/".$img);
-
-            $texto = $_POST['texto'];
-            $hoje = date("Y-m-d");
-
-            if($texto == null){
-                Echo"<p>Escreva Algo!</p>";
-            }else {
-                $query = "INSERT INTO pubs (user, texto, imagem, dataa) VALUES ('$login_cookie','$texto','$img','$hoje')";
-                $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
-                if ($data) {
-                    header("location ./");
-                }else{
-                    Echo"<p>Algo deu errado!</p>";
-                }
-            }
-        }
+$id = $_GET['id'];
+$saberr = mysqli_query($connect, "SELECT * FROM usuario WHERE id=$id");
+$saber = mysqli_fetch_assoc($saberr);
+$email = $saber["usu_mail"];
+    if ($email == $login_cookie) {
+    header("myprofile.php");
     }
+$pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -52,20 +21,8 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div id="publish">
-    <div class="container">
-    <div class="form-group" id="publicar">
-    <form method="POST" enctype="multipart/form-data">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva algo aqui..." name="texto"></textarea>
-    <input type="submit" value="Publicar" id="butpub" name="publish">
-    <label for="file-input">
-        <img src="./img/clip.png" alt="" srcset="">
-    </label>
-    <input type="file" id="file-input" name="file" hidden>
-    </form>
-  </div>
-  </div>
-  </div>
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

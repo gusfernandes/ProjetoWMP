@@ -16,9 +16,9 @@ include("db.php");
         $do_email_check = mysqli_num_rows($email_check);
         if ($do_email_check >= 1) {
             echo"<h5>Esse email já está cadastrado no sistema!<br> faça o login <a href=login.php> aqui</a> </h5>";
-        }elseif($nome == null or strlen($nome)<3){
+        }elseif($nome == '' or strlen($nome)<3){
             echo"<h5>Escreva seu nome corretamente!</h5>";
-        }elseif($pass == null or strlen($pass)<8){
+        }elseif($pass == '' or strlen($pass)<8){
             echo"<h5> Sua senha deve ter 8 ou mais caracteres!</h5>";
         }else {
          $query = mysqli_query($connect, "INSERT INTO usuario (usu_nick, usu_name, usu_mail, usu_pass, usu_date) VALUES ('$nome','$user','$mail','$pass','$idade')");
