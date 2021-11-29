@@ -81,7 +81,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
 <?php 
     while($pub=mysqli_fetch_assoc($pubs)){
         $email = $pub['user'];
-        $saberr = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_mail=$email");
+        $saberr = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_mail = $email");
         $saber = mysqli_fetch_assoc($saberr);
         $nome = $saber['usu_nick']." " .$saber['usu_name'];
         $id = pub['id'];
