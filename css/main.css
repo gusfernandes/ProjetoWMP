@@ -52,3 +52,26 @@ div.pub span{
 div.pub img{
     display: block; margin: auto; width: 100%; margin-top: 10px; border-bottom-left-radius: 5px;
 }
+h3{
+    text-align: center;
+    margin-top: 2px;
+}
+h4{
+    text-align: center;
+    margin-top: 2px;
+}
+div#menu{
+    width: 400px; height: 153px; display: block; margin: auto; border: none;
+    border-radius: 5px; background-color: #FFF; 
+}   
+img#profile{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    border: 3px solid #FFF;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin-bottom: -10px;
+    margin-top: 30px;
+}

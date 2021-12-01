@@ -1,14 +1,18 @@
 <?php 
 include("header.php");
 
-$id = $_GET['id'];
-$saberr = mysqli_query($connect, "SELECT * FROM usuario WHERE id=$id");
+$id = $_GET["id"];
+$saberr = mysqli_query($connect, "SELECT * FROM usuario WHERE id='$id'");
 $saber = mysqli_fetch_assoc($saberr);
-$email = $saber["usu_mail"];
+$email = $saber["usu_name"];
+
     if ($email == $login_cookie) {
-    header("myprofile.php");
+        //header("location: myprofile.php");
+
     }
-$pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
+
+$pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY id DESC");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -19,10 +23,34 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
     <title>Where's My Player</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
+
 </head>
 <body>
+    <div class="container">
+    <?php       
+    if ($saber["usu_img"]==null) {
+        echo '<img src="img/perfil.png" id=profile>';
+    }else{
+        echo '<img src="upload/'.$saber["usu_img"].'" id="profile">';
+    }
+    
+    ?>
+    <div id="menu">    <h3><?php 
+    echo $saber['usu_nick'];
+    ?></h3>
+        <h4><?php 
+    echo $saber['usu_name'];
+    ?></h4>
+    <input type="submit" value="Adicionar Amigo" name="add" class="form-control sm">
+    <input type="submit" value="Denunciar" name="report" class="form-control sm">
+
+    </div>
 
 
+
+
+
+</div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -38,22 +66,22 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
 <?php 
     while($pub=mysqli_fetch_assoc($pubs)){
         $email = $pub['user'];
-        $saberr = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_mail=$email");
+        $saberr = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_name='$email'");
         $saber = mysqli_fetch_assoc($saberr);
         $nome = $saber['usu_nick']." " .$saber['usu_name'];
-        $id = pub['id'];
+        $id = $pub['id'];
 
-        if($pub['img']==null){
+        if($pub['imagem']==null){
             echo'<div class="pub" id="'.$id.'">
             <p><a href="perfil.php?id='.$saber['id'].'">'.$nome.'</a>
-            - '.$pub["data"].'
+            '.$pub["dataa"].'
             </p>
             <span>'.$pub['texto'].'</span><br/>
             </div>';
         }else {
             echo'<div class="pub" id="'.$id.'">
             <p><a href="perfil.php?id='.$saber['id'].'">'.$nome.'</a>
-            - '.$pub["data"].'
+             '.$pub["dataa"].'
             </p>
             <span>'.$pub['texto'].'</span><br/>
             <img src="upload/'.$pub["imagem"].'"/>

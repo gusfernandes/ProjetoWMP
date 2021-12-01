@@ -28,7 +28,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
             $hoje = date("Y-m-d");
 
             if($texto == null){
-                Echo"<p>Escreva Algo!</p>";
+                Echo'<p>Escreva Algo!</p>';
             }else {
                 $query = "INSERT INTO pubs (user, texto, imagem, dataa) VALUES ('$login_cookie','$texto','$img','$hoje')";
                 $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
@@ -86,7 +86,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
         $nome = $saber['usu_nick']." " .$saber['usu_name'];
         $id = $pub['id'];
 
-        if($pub['imagem']==" "){
+        if($pub['imagem']==null){
             echo'<div class="pub" id="'.$id.'">
             <p><a href="perfil.php?id='.$saber['id'].'">'.$nome.'</a>
             '.$pub["dataa"].'
