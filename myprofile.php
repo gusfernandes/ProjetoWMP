@@ -27,9 +27,9 @@ if (isset($_POST['settings'])){
     <div class="container">
     <?php       
     if ($saber["usu_img"]==null) {
-        echo '<img src="img/perfil.png" id=profile>';
+        echo '<a href="profilepic.php" style="width: 100px; display: block; margin: auto;"><img src="img/perfil.png" id=profile></a>';
     }else{
-        echo '<img src="upload/'.$saber["usu_img"].'" id="profile">';
+        echo '<a href="profilepic.php" style="width: 100px; display: block; margin: auto;"><img src="upload/'.$saber["usu_img"].'" id="profile"></a>';
     }
     ?>
     <div id="menu">

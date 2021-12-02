@@ -1,0 +1,29 @@
+body{
+    background-color: #23201E;
+}
+h2{
+ margin-top: 5%;
+ text-align: center;
+ color: #fff;
+}
+form{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 350px;
+    margin-top: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px #666;
+    border-radius: 5px;
+}
+input[type="submit"]{
+    border: none;
+    width: 100px;
+    border-radius: 3px;
+    height: 25px;
+    }
+input[type="submit"]:hover{
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+}
