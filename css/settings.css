@@ -8,7 +8,7 @@ body{
     height: 91px;
 }
 h2{color:#FFF;
-    margin-top: 180px;
+    margin-top: 50px;
     text-align: center;}
 form{
     text-align: center;
@@ -80,4 +80,8 @@ h5{
 }
 .cad{
     text-align: center;
+}
+img#logoset{
+    margin-left: 47%;
+    margin-top: 2%;
 }

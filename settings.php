@@ -7,10 +7,27 @@
     if(isset($_POST['criar'])){
         $nome = $_POST['nome'];
         $user = $_POST['user'];
-        $mail = $_POST['email'];
-        $idade = $_POST['idade'];
         $pass = $_POST['pass'];
+
+    if ($nome==null) {
+      echo "Escreva o seu nome!";
+    }elseif($user==null){
+      echo "Escreva o nickname!";
+    }elseif ($pass='') {
+      echo "Escreva a sua senha corretamente!";
+    }else {
+      $query = "UPDATE `usuario` SET `usu_name`='$user', `usu_nick` = '$nome', `usu_pass` = '$pass' WHERE `usu_name` = '$login_cookie'";
+      $data = mysqli_query($connect, $query);
+      if ($data) {
+        header("Location: myprofile.php");
+      }else {
+        echo "Algo deu errado! Tente novamente!";
+      }
     }
+    }
+    if(isset($_POST['cancelar'])){
+      header("Location: myprofile.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -41,14 +58,15 @@
     </ul>
   </div>
 </nav>
-    <div class="Login">   
+    <div class="Login"> 
+    <img src="./img/logo.png" id="logoset" alt="">  
     <h2>Alterar suas informações</h2>
-    <form method="POST">
+    <form action="" method="POST">
         <div class="form-group">
-        <input type="username" placeholder="Nome de usuário" value="<?php echo$info['usu_name'];?>" name="user"><br>
-        <input type="name" placeholder="Nome e Sobrenome" value="<?php echo$info['usu_nick'];?>" name="nome"><br>
-        <input type="password" placeholder="Escreva a sua senha" value="<?php echo$info['usu_pass']; ?>" name="pass"><br>
-        <input type="submit" value="Atualizar" name="atualizar">&nbsp;&nbsp;<input type="submit" value="Cancelar" name="cancelar">
+        <input type="username" placeholder="Nome de usuário" value="<?php echo $info['usu_name'];?>" name="user"><br>
+        <input type="name" placeholder="Nome e Sobrenome" value="<?php echo $info['usu_nick'];?>" name="nome"><br>
+        <input type="password" placeholder="Escreva a sua senha" value="<?php echo $info['usu_pass'];?>" name="pass"><br>
+        <input type="submit" value="Atualizar" name="criar">&nbsp;&nbsp;<input type="submit" value="Cancelar" name="cancelar">
         </div>
     </form>
     </div>

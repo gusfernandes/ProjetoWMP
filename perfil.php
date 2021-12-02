@@ -6,9 +6,9 @@ $saberr = mysqli_query($connect, "SELECT * FROM usuario WHERE id='$id'");
 $saber = mysqli_fetch_assoc($saberr);
 $email = $saber["usu_name"];
 
-    if ($email == $login_cookie) {
-        header("location: myprofile.php");
-    }
+if ($email == $login_cookie) {
+    header("Location: myprofile.php");
+}
 
 $pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY id DESC");
 

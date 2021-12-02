@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include("header.php");
 
 $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
@@ -14,7 +15,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
                 $query = "INSERT INTO pubs (user, texto, dataa) VALUES ('$login_cookie','$texto','$hoje')";
                 $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
                 if ($data) {
-                    header("location ./");
+                    header("location: ./");
                 }else{
                     Echo"<p>Algo deu errado!</p>";
                 }
@@ -33,7 +34,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
                 $query = "INSERT INTO pubs (user, texto, imagem, dataa) VALUES ('$login_cookie','$texto','$img','$hoje')";
                 $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
                 if ($data) {
-                    header("location ./");
+                    header("location: ./");
                 }else{
                     Echo"<p>Algo deu errado!</p>";
                 }
