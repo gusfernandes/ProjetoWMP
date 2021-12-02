@@ -59,7 +59,7 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva algo aqui..." name="texto"></textarea>
     <input type="submit" value="Publicar" id="butpub" name="publish">
     <label for="file-input">
-        <img src="./img/clip.png" alt="" srcset="">
+        <img src="./img/clip.png" class="file"alt="" srcset="">
     </label>
     <input type="file" id="file-input" name="file" hidden>
     </form>

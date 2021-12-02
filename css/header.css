@@ -4,6 +4,9 @@ body{
 img[name=logo]{
     float: left;
 }
+.navbar{
+    height: 10%;
+}
 .form-inline .form-control {
     display: inline-block;
     margin-left: -141%;

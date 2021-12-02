@@ -7,8 +7,7 @@ $saber = mysqli_fetch_assoc($saberr);
 $email = $saber["usu_name"];
 
     if ($email == $login_cookie) {
-        //header("location: myprofile.php");
-
+        header("location: myprofile.php");
     }
 
 $pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY id DESC");
@@ -41,15 +40,8 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY i
         <h4><?php 
     echo $saber['usu_name'];
     ?></h4>
-    <input type="submit" value="Adicionar Amigo" name="add" class="form-control sm">
     <input type="submit" value="Denunciar" name="report" class="form-control sm">
-
     </div>
-
-
-
-
-
 </div>
     <!-- Optional JavaScript; choose one of the two! -->
 

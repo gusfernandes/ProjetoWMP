@@ -1,24 +1,29 @@
-<?php
-include("db.php");
+<?php 
+  include("db.php");
+  $login_cookie = $_COOKIE['login'];
+  $infoo = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_name='$login_cookie'");
+  $info = mysqli_fetch_assoc($infoo);
 
-$login_cookie = $_COOKIE['login'];
-if (!isset($login_cookie)) {
-
-    header("Location: login.php");
-}
+    if(isset($_POST['criar'])){
+        $nome = $_POST['nome'];
+        $user = $_POST['user'];
+        $mail = $_POST['email'];
+        $idade = $_POST['idade'];
+        $pass = $_POST['pass'];
+    }
 ?>
 <!DOCTYPE html>
-<html lang="pt_Br">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where's My Player</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/settings.css">
 </head>
 <body>
-    <div class="topo">
+<div class="topo">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
@@ -33,38 +38,26 @@ if (!isset($login_cookie)) {
       <li class="nav-item">
         <a class="nav-link" href="myprofile.php">Perfil</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
-          Jogos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Counter-Strike</a>
-          <a class="dropdown-item" href="#">League of Legends</a>
-          <a class="dropdown-item" href="#">Valorant</a>
-          <a class="dropdown-item" href="#">Minecraft</a>
-        </div>
-      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <button type="button" class="btn btn-outline-dark"><a href="login.php" class="link">Entrar</a></button>
-    <button type="button" class="btn btn-outline-dark"><a href="registrar.php" class="link">Cadastrar-se</a></button>
   </div>
 </nav>
-
+    <div class="Login">   
+    <h2>Alterar suas informações</h2>
+    <form method="POST">
+        <div class="form-group">
+        <input type="username" placeholder="Nome de usuário" value="<?php echo$info['usu_name'];?>" name="user"><br>
+        <input type="name" placeholder="Nome e Sobrenome" value="<?php echo$info['usu_nick'];?>" name="nome"><br>
+        <input type="password" placeholder="Escreva a sua senha" value="<?php echo$info['usu_pass']; ?>" name="pass"><br>
+        <input type="submit" value="Atualizar" name="atualizar">&nbsp;&nbsp;<input type="submit" value="Cancelar" name="cancelar">
+        </div>
+    </form>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script>
-  $(function () {
-    $('.dropdown-toggle').dropdown();
-  }); 
-</script>
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
