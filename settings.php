@@ -13,9 +13,9 @@
       echo "Escreva o seu nome!";
     }elseif($user==null){
       echo "Escreva o nickname!";
-    }elseif ($pass='') {
+    }elseif ($pass==null) {
       echo "Escreva a sua senha corretamente!";
-    }else {
+    }else{
       $query = "UPDATE `usuario` SET `usu_name`='$user', `usu_nick` = '$nome', `usu_pass` = '$pass' WHERE `usu_name` = '$login_cookie'";
       $data = mysqli_query($connect, $query);
       if ($data) {

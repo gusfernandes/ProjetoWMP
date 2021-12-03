@@ -1,0 +1,23 @@
+body{
+    background-color: #23201E;
+}
+h3{
+    margin-top: 30px;
+    text-align: center;
+    color: #FFF;
+}
+h4{
+    text-align: center;
+    color: #FFF;
+}
+p[name=p]{
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: #FFF;
+    max-width: 700px;
+}
+a[name=p]{
+    color: #111111;
+    text-decoration: none;
+}
