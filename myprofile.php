@@ -36,7 +36,7 @@ if (isset($_POST['settings'])){
     <form action="settings.php" method="POST">
     <h3><?php echo $saber['usu_nick']; ?></h3>
     <h4><?php echo $saber['usu_name'];?></h4>
-    <input type="submit" value="Alterar Info" name="settings" class="form-control sm">
+    <input type="submit" value="Alterar Informações" name="settings" class="form-control sm">
     </form>
     </div>
 </div>

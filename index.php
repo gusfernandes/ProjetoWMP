@@ -10,14 +10,18 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
             $hoje = date("Y-m-d");
 
             if($texto == null){
-                Echo"<p>Escreva Algo!</p>";
+                Echo'<div class="alert alert-danger" role="alert">
+                Escreva alguma coisa!
+              </div>';
             }else {
                 $query = "INSERT INTO pubs (user, texto, dataa) VALUES ('$login_cookie','$texto','$hoje')";
                 $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
                 if ($data) {
-                    header("location: ./");
+                    header("location: index.php");
                 }else{
-                    Echo"<p>Algo deu errado!</p>";
+                    Echo'<div class="alert alert-danger" role="alert">
+                    Algo deu errado, tente novamente!
+                  </div>';
                 }
             }
         }else {
@@ -29,12 +33,14 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
             $hoje = date("Y-m-d");
 
             if($texto == null){
-                Echo'<p>Escreva Algo!</p>';
+                Echo'<div class="alert alert-danger" role="alert">
+                Algo deu errado, tente novamente!
+              </div>';
             }else {
                 $query = "INSERT INTO pubs (user, texto, imagem, dataa) VALUES ('$login_cookie','$texto','$img','$hoje')";
                 $data = mysqli_query($connect, $query) or die (mysqli_error($connect));
                 if ($data) {
-                    header("location: ./");
+                    header("location: index.php");
                 }else{
                     Echo"<p>Algo deu errado!</p>";
                 }

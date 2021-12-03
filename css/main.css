@@ -37,14 +37,14 @@ div.pub{
     border-radius: 5px; background-color: #FFF; box-shadow: 0 0 6px #A1A1A1; margin-top: 30px;
 }
 div.pub a{
-    color: #666; text-decoration: none;
+    color: rgb(31, 31, 31); text-decoration: none;
 }
 
 div.pub a:hover{
     color: #111; text-decoration: none;
 }
 div.pub p{
-    margin-left:10px; content: #666; padding-top: 10px;
+    margin-left:10px; content: rgb(31, 31, 31); padding-top: 10px;
 }
 div.pub span{
     display: block; margin: auto; width: 300px; margin-top: 10px;
@@ -76,6 +76,15 @@ img#profile{
     margin-top: 30px;
 }
 .file{
+    border: #FFF;
+    background-color: #FFF;
     margin-top: -179%;
     margin-left: -1647%;
+}
+.alert{
+    margin-left:30%;
+    text-align:center
+}
+.alert-danger{
+width:35%;
 }

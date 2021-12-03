@@ -21,3 +21,10 @@ a[name=p]{
     color: #111111;
     text-decoration: none;
 }
+.alert{
+    margin-left:30%;
+    text-align:center
+}
+.alert-danger{
+width:35%;
+}

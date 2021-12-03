@@ -20,7 +20,7 @@ if (!isset($login_cookie)) {
     <div class="topo">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="index.php">
     <img src="./img/logo.png" width="50" height="50" alt="Logo">
   </a>
 </nav>
@@ -32,7 +32,7 @@ if (!isset($login_cookie)) {
       <li class="nav-item">
         <a class="nav-link" href="myprofile.php">Perfil</a>
       </li>
-      <li class="nav-item dropdown">
+      <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
           Jogos
         </a>
@@ -42,7 +42,7 @@ if (!isset($login_cookie)) {
           <a class="dropdown-item" href="#">Valorant</a>
           <a class="dropdown-item" href="#">Minecraft</a>
         </div>
-      </li>
+      </li> -->
     </ul>
     <form class="form-inline my-2 my-lg-0" method="GET" action="pesquisar.php">
       <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
@@ -60,7 +60,7 @@ if (!isset($login_cookie)) {
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script>
-  $(function () {
+    $(function () {
     $('.dropdown-toggle').dropdown();
   }); 
 </script>

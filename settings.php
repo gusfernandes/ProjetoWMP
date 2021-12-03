@@ -10,18 +10,26 @@
         $pass = $_POST['pass'];
 
     if ($nome==null) {
-      echo "Escreva o seu nome!";
+      echo '<div class="alert alert-danger" role="alert">
+      Escreva seu nome corretamente!
+    </div>';
     }elseif($user==null){
-      echo "Escreva o nickname!";
+      echo '<div class="alert alert-danger" role="alert">
+      Escreva o seu nome de usuário corretamente!
+    </div>';
     }elseif ($pass==null) {
-      echo "Escreva a sua senha corretamente!";
+      echo '<div class="alert alert-danger" role="alert">
+      Escreva sua nova senha corretamente!
+    </div>';
     }else{
       $query = "UPDATE `usuario` SET `usu_name`='$user', `usu_nick` = '$nome', `usu_pass` = '$pass' WHERE `usu_name` = '$login_cookie'";
       $data = mysqli_query($connect, $query);
       if ($data) {
         header("Location: myprofile.php");
       }else {
-        echo "Algo deu errado! Tente novamente!";
+        echo '<div class="alert alert-danger" role="alert">
+        Algo deu errado, tente novamente!
+      </div>';
       }
     }
     }

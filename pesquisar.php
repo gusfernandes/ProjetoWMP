@@ -16,7 +16,7 @@
     <h3>Resultados da pesquisa</h3><br>
     <?php 
         $query = $_GET['query'];
-        $min_lenght = 3;
+        $min_lenght = 1;
 
         if (strlen($query) >=$min_lenght) {
             $query = htmlspecialchars($query);
@@ -30,10 +30,14 @@
                 echo '<a href="perfil.php?id='.$results["id"].'" name="p"><br><p name="p"><h4>'.$results["usu_nick"].'</h4></p><br></a>';
             }
             }else{
-                echo'<br><h4>Conteúdo de pesquisa inválido</h4>';
+                echo'<br><div class="alert alert-danger" role="alert">
+                Conteúdo de pesquisa inválido!
+              </div>';
             }
         }else{
-            echo'<br><h4>Escreva mais de 3 letras!</h4>';
+            echo'<br><div class="alert alert-danger" role="alert">
+            Escreva algo!
+          </div>';
         }
     
     

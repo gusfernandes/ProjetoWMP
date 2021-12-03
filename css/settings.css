@@ -43,23 +43,8 @@ input[type="submit"]{
         color: #FFF;
         cursor: pointer;
     }
-input[type="date"]{
-    border: 1px solid #686868;
-    border-radius: 0.25rem;
-    width: 250px;
-    height: 35px;
-    padding-left: 10px;
-    margin-top: 20px;
-}
+
 input[type="name"]{
-    border: 1px solid #686868;
-    border-radius: 0.25rem;
-    width: 250px;
-    height: 35px;
-    padding-left: 10px;
-    margin-top: 20px;
-}
-input[type="email"]{
     border: 1px solid #686868;
     border-radius: 0.25rem;
     width: 250px;
@@ -84,4 +69,11 @@ h5{
 img#logoset{
     margin-left: 47%;
     margin-top: 2%;
+}
+.alert{
+    margin-left:30%;
+    text-align:center
+}
+.alert-danger{
+width:35%;
 }
