@@ -1,0 +1,29 @@
+body{
+    background-color: #23201E;
+}
+h4{
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+div#box p{
+    text-align: center;
+    cursor: pointer;
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+}
+div#box p:hover{
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+}
+div#box{
+        width: 500px; min-height: 70px; max-height: 1000px; display: block; margin: auto; border: none;
+        border-radius: 5px; background-color: #FFF; box-shadow: 0 0 6px #A1A1A1; margin-top: 30px;
+}
+div#box:hover{
+    box-shadow: inset 0 0 6 #fff;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}

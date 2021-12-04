@@ -8,13 +8,13 @@ h3{
 }
 h4{
     text-align: center;
-    color: #FFF;
+    color: rgb(31, 31, 31);
 }
 p[name=p]{
     display: block;
     margin: auto;
     text-align: center;
-    color: #FFF;
+    color: rgb(31, 31, 31);
     max-width: 700px;
 }
 a[name=p]{
@@ -27,4 +27,8 @@ a[name=p]{
 }
 .alert-danger{
 width:35%;
+}
+div#box{
+    width: 500px; min-height: 70px; max-height: 1000px; display: block; margin: auto; border: none;
+    border-radius: 5px; background-color: #FFF; box-shadow: 0 0 6px #A1A1A1; margin-top: 30px;
 }

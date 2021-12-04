@@ -88,3 +88,8 @@ img#profile{
 .alert-danger{
 width:35%;
 }
+div#footer{
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+}

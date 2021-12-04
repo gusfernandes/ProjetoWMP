@@ -111,5 +111,6 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs ORDER BY id DESC");
         }
     }
 ?>
+<div id="footer"><p>&copy; Where's my Player, 2021 - Todos os direitos reservados</p></div>
 </body>
 </html>

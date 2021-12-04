@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Dez-2021 às 04:50
+-- Tempo de geração: 04-Dez-2021 às 18:36
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -37,6 +37,15 @@ CREATE TABLE `chat` (
   `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `chat`
+--
+
+INSERT INTO `chat` (`id`, `de`, `para`, `texto`, `imagem`, `data`, `status`) VALUES
+(1, 'ayrton22', 'hitzy', 'ola amigo', '', '2021-12-04', 0),
+(2, 'duduz', 'hitzy', 'carai borracha mano', 'gato.jpg', '2021-12-04', 0),
+(3, 'ayrton22', 'hitzy', 'me responde', '', '2021-12-04', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +74,8 @@ INSERT INTO `pubs` (`id`, `user`, `texto`, `imagem`, `dataa`) VALUES
 (36, 'ayrton22', 'teste outra conta', '', '2021-11-30'),
 (37, 'hitzy', 'fiz a atividade de bd de hoje!!!!', 'WhatsApp Image 2021-11-30 at 22.20.55.jpeg', '2021-12-02'),
 (38, 'hitzy', 'Teste', '', '2021-12-02'),
-(39, 'hitzy', 'Uai sÃ´', '', '2021-12-02');
+(39, 'hitzy', 'Uai sÃ´', '', '2021-12-02'),
+(40, 'duduz', 'Eita bixo que isso\r\n', '', '2021-12-04');
 
 -- --------------------------------------------------------
 
@@ -90,7 +100,8 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `usu_name`, `usu_mail`, `usu_nick`, `usu_img`, `usu_pass`, `usu_date`) VALUES
 (1, 'gustavo', 'xtremenoobs@hotmail.com', 'Ayrton Senna', '', '123456789', '2021-11-30'),
 (2, 'hitzy', 'guga.spfc.guga@gmail.com', 'Gustavo Fernandes', 'perfil.jpg', 'gustavo1234', '2002-05-11'),
-(3, 'ayrton22', 'ayrton@gmail.com', 'Ayrton Senna', '3201933eu (2).jpg', '', '2001-02-20');
+(3, 'ayrton22', 'ayrton@gmail.com', 'Ayrton Senna', '3201933eu (2).jpg', '', '2001-02-20'),
+(4, 'duduz', 'duduz@gmail.com', 'Eduardo Pio', '', 'dudu12345', '2003-08-03');
 
 --
 -- Índices para tabelas despejadas
@@ -122,19 +133,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `pubs`
 --
 ALTER TABLE `pubs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

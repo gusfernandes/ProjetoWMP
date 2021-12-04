@@ -27,7 +27,7 @@
             if($rows > 0) {
             echo "<br><br>";
             while ($results = mysqli_fetch_array($raw_results)){
-                echo '<a href="perfil.php?id='.$results["id"].'" name="p"><br><p name="p"><h4>'.$results["usu_nick"].'</h4></p><br></a>';
+                echo '<div id="box"><a href="perfil.php?id='.$results["id"].'" name="p"><br><p name="p"><h4>'.$results["usu_nick"].'</h4></p><br></a></div><hr>';
             }
             }else{
                 echo'<br><div class="alert alert-danger" role="alert">
