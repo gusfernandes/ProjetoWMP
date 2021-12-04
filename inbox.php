@@ -1,7 +1,6 @@
 <?php 
-    header("header");
-    include("db.php");
-    $login_cookie = $_COOKIE['login'];
+    include("header.php");
+
     $sql = mysqli_query($connect,"SELECT * FROM chat WHERE para='$login_cookie' GROUP BY de ORDER BY id");
 
     $ups = mysqli_query($connect, "SELECT * FROM chat WHERE para='$login_cookie' AND `status`=0");
@@ -32,6 +31,10 @@
                 $all = mysqli_fetch_assoc($tudo);
                 $conta = mysqli_query($connect,"SELECT * FROM chat WHERE de='$from' and para='$login_cookie' and `status` = 0");
                 $contar = mysqli_num_rows($conta);
+
+                echo '<br><a name="d" href="chat.php?from='.$all["id"].'"><div id="box">
+                <br><p>'.$all["usu_nick"].' - '.$contar.' mensagens novas</p><br>
+                </div></a>';
             }
         }
     ?>

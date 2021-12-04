@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Dez-2021 às 20:10
+-- Tempo de geração: 04-Dez-2021 às 04:50
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -20,6 +20,22 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bancotcc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `de` varchar(200) NOT NULL,
+  `para` varchar(200) NOT NULL,
+  `texto` text NOT NULL,
+  `imagem` text NOT NULL,
+  `data` date NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -81,6 +97,12 @@ INSERT INTO `usuario` (`id`, `usu_name`, `usu_mail`, `usu_nick`, `usu_img`, `usu
 --
 
 --
+-- Índices para tabela `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `pubs`
 --
 ALTER TABLE `pubs`
@@ -95,6 +117,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pubs`

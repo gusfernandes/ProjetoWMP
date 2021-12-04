@@ -32,6 +32,9 @@ if (!isset($login_cookie)) {
       <li class="nav-item">
         <a class="nav-link" href="myprofile.php">Perfil</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="inbox.php">Caixa de Entrada</a>
+      </li>
       <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
           Jogos
