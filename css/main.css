@@ -3,6 +3,7 @@ body{
     width: 100%;
     height: 100%;
     background-image:url('../img/fundoindex.png');
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 main{

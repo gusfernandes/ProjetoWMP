@@ -1,0 +1,44 @@
+body{
+    background-color: #23201E;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h4{
+    text-align: center;
+    color: #FFF;
+    margin-top: 10px;
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+div#box{
+    display: block;
+    margin: auto;
+    width: 650px;
+    height: 400px;
+
+}
+div#send{
+    display: block;
+    margin: auto;
+    width: 700px;
+    text-align: center;
+}
+div#send button[name="image"]{
+width: 100px;
+height: 35px;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+margin-left: -71%;
+margin: 13px;
+background-color: #000;
+}
+div#send button[name="send"]{
+width: 100px;
+background-color: #000;
+height: 35px;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}

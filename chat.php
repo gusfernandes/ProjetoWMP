@@ -20,6 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/chat.css">
     <title>Where's My Player</title>
 </head>
 <body>
@@ -33,7 +34,8 @@
         <br>
         <div id="send">
             <input type="text" name="text" placeholder="Escreva sua mensagem aqui!" class="form-control">
-            <a href="image.php?id=<?php echo $id; ?>"><button class="btn btn-primary" value="imagem" name="image">Imagem</button</a>&nbsp;&nbsp;&nbsp;
+            <a href="image.php?id=<?php echo $id; ?>"><button class="btn btn-primary" value="imagem" name="image">Imagem</button</a>
+            
             <button class="btn btn-primary" type="submit" name="send" value="Enviar">Enviar</button>
         </div>
     </form>

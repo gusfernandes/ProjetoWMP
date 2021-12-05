@@ -1,5 +1,6 @@
 body{
     background-color: #3c3a3a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 img[name=logo]{
     float: left;
