@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include("header.php");
 
 $id = $_GET["id"];
@@ -11,6 +12,10 @@ header("Location:myprofile.php");
 }
 
 $pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY id DESC");
+
+if (isset($_POST['msg'])) {
+    header("Location:chat.php?from=$id");
+}  
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +45,10 @@ $pubs = mysqli_query($connect,"SELECT * FROM pubs WHERE user='$email' ORDER BY i
         <h4><?php 
     echo $saber['usu_name'];
     ?></h4>
+    <form action="" method="post">
     <input type="submit" value="Denunciar" name="report" class="form-control sm">
+    <input type="submit" value="Enviar mensagem" name="msg" class="form-control sm" id="msg">
+    </form>
     </div>
 </div>
     <!-- Optional JavaScript; choose one of the two! -->
