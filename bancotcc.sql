@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Dez-2021 às 08:06
+-- Tempo de geração: 05-Dez-2021 às 18:12
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -42,10 +42,13 @@ CREATE TABLE `chat` (
 --
 
 INSERT INTO `chat` (`id`, `de`, `para`, `texto`, `imagem`, `data`, `status`) VALUES
-(1, 'ayrton22', 'hitzy', 'ola amigo', '', '2021-12-04', 0),
-(2, 'duduz', 'hitzy', 'carai borracha mano', 'gato.jpg', '2021-12-04', 0),
-(3, 'ayrton22', 'hitzy', 'me responde', '', '2021-12-04', 0),
-(4, 'hitzy', 'ayrton22', 'Oiii', '', '2021-12-05', 0);
+(1, 'ayrton22', 'hitzy', 'ola amigo', '', '2021-12-04', 1),
+(2, 'duduz', 'hitzy', 'carai borracha mano', 'gato.jpg', '2021-12-04', 1),
+(3, 'ayrton22', 'hitzy', 'me responde', '', '2021-12-04', 1),
+(4, 'hitzy', 'ayrton22', 'Oiii', '', '2021-12-05', 1),
+(5, 'hitzy', 'ayrton22', 'tudo bem?', '', '2021-12-05', 1),
+(6, 'ayrton22', 'hitzy', 'tudo!!!!', '', '2021-12-05', 1),
+(7, 'yEmerson', 'hitzy', 'Salve mano! Tem vaga pra flex ainda? tenho interesse', '', '2021-12-05', 0);
 
 -- --------------------------------------------------------
 
@@ -76,7 +79,12 @@ INSERT INTO `pubs` (`id`, `user`, `texto`, `imagem`, `dataa`) VALUES
 (37, 'hitzy', 'fiz a atividade de bd de hoje!!!!', 'WhatsApp Image 2021-11-30 at 22.20.55.jpeg', '2021-12-02'),
 (38, 'hitzy', 'Teste', '', '2021-12-02'),
 (39, 'hitzy', 'Uai sÃ´', '', '2021-12-02'),
-(40, 'duduz', 'Eita bixo que isso\r\n', '', '2021-12-04');
+(40, 'duduz', 'Eita bixo que isso\r\n', '', '2021-12-04'),
+(41, 'ayrton22', 'AlguÃ©m quer jogar algo?', '', '2021-12-05'),
+(42, 'hitzy', 'AlguÃ©m flex lolzinho? to tentando subir de elo, quem quiser manda msg privada!!!', 'lolzinho.png', '2021-12-05'),
+(43, 'yEmerson', 'Oii, sou novo aqui alguÃ©m quer jogar algo? valorant lolzinho ou cs???', '', '2021-12-05'),
+(44, 'Gguiz', 'MINEZADA DOS CRIAS??????????????', '', '2021-12-05'),
+(45, 'mercadalegria', 'O Melhor preÃ§o para os gamers!!!! Venha conhecer!', 'mercado.png', '2021-12-05');
 
 -- --------------------------------------------------------
 
@@ -101,8 +109,11 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `usu_name`, `usu_mail`, `usu_nick`, `usu_img`, `usu_pass`, `usu_date`) VALUES
 (1, 'gustavo', 'xtremenoobs@hotmail.com', 'Ayrton Senna', '', '123456789', '2021-11-30'),
 (2, 'hitzy', 'guga.spfc.guga@gmail.com', 'Gustavo Fernandes', 'perfil.jpg', 'gustavo1234', '2002-05-11'),
-(3, 'ayrton22', 'ayrton@gmail.com', 'Ayrton Senna', '3201933eu (2).jpg', '', '2001-02-20'),
-(4, 'duduz', 'duduz@gmail.com', 'Eduardo Pio', '', 'dudu12345', '2003-08-03');
+(3, 'ayrton22', 'ayrton@gmail.com', 'Ayrton Senna', '3201933eu (2).jpg', 'ayrton1234', '2001-02-20'),
+(4, 'duduz', 'duduz@gmail.com', 'Eduardo Pio', '', 'dudu12345', '2003-08-03'),
+(5, 'yEmerson', 'emersonc@gmail.com', 'Emerson Cardoso', '', 'emerson12345', '2002-01-17'),
+(6, 'Gguiz', 'gguizpaula@gmail.com', 'Guilherme Paula', '', 'gguiz12345', '1999-06-07'),
+(7, 'mercadalegria', 'mercadinhosoalegria@gmail.com', 'Mercadinho SÃ³ Alegr', '', 'mercado123', '1967-07-03');
 
 --
 -- Índices para tabelas despejadas
@@ -134,19 +145,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `pubs`
 --
 ALTER TABLE `pubs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

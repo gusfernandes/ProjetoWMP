@@ -51,20 +51,12 @@
         </div>
         <br>
         <div id="send">
-            <input type="text" name="text" placeholder="Escreva sua mensagem aqui!" class="form-control">
+            <input type="text" name="text" placeholder="Escreva sua mensagem aqui!" class="form-control" autocomplete="off";>
             <a href="image.php?id=<?php echo $id; ?>"><button class="btn btn-primary" value="imagem" name="image">Imagem</button</a>
             
             <button class="btn btn-primary" type="submit" name="send" value="Enviar">Enviar</button>
         </div>
     </form>
-
-
-
-
-
-
-
-
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
