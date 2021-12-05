@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     include("header.php");
 
     $id = $_GET["from"];
@@ -10,7 +11,24 @@
     $sql = mysqli_query($connect, "SELECT * FROM chat WHERE para = '$login_cookie' AND de = '$user' or de = '$login_cookie' AND para = '$user' ORDER BY id");
 
     if (isset($_POST["send"])) {
-        
+        $msg = $_POST['text'];
+        $data = date("y/m/d");
+
+        if ($msg == null) {
+            echo '<div class="alert alert-danger" role="alert">
+            Não é possível enviar uma mensagem em branco
+          </div>';
+        }else{
+            $query = "INSERT INTO chat (`de`, `para`, `texto`, `status`, `data`) VALUES ('$login_cookie','$user','".mysqli_real_escape_string($connect, $msg)."',0,'$data')";
+            $data = mysqli_query($connect,$query);
+            if ($data) {
+                header("refresh:0;");
+            }else {
+                echo '<div class="alert alert-danger" role="alert">
+                Algo deu errado, tente novamente!
+              </div>' .mysqli_error($connect);
+            }
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -29,7 +47,7 @@
     <form action="" method="POST">
         <div class="form-group">
         <div id="box">
-            <object data="bubble.php?from=<?php echo$id; ?>#bottom" type="text/html"  width="635px" heigth="390px" style="overflow: auto;"></object>
+        <object data="bubble.php?from=<?php echo$id; ?> #bottom" type="text/html"  width="635px" heigth="600px" style="overflow: auto;"></object>
         </div>
         <br>
         <div id="send">

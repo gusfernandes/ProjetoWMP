@@ -15,7 +15,7 @@ div#box{
     display: block;
     margin: auto;
     width: 650px;
-    height: 400px;
+    height: 460px;
 
 }
 div#send{
@@ -41,4 +41,11 @@ height: 35px;
 border: none;
 border-radius: 3px;
 cursor: pointer;
+}
+.alert{
+    margin-left:30%;
+    text-align:center
+}
+.alert-danger{
+width:35%;
 }
