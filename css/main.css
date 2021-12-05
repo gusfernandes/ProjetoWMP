@@ -28,7 +28,7 @@ input[type="text"]{
 }
 #butpub{
     margin-top: 10px;
-    margin-left: 87%;
+    margin-left: 86%;
 }
 #file-input{
 margin-left: 423px;
@@ -81,6 +81,7 @@ img#profile{
     background-color: #FFF;
     margin-top: -179%;
     margin-left: -1647%;
+    border-radius: 6px;
 }
 .alert{
     margin-left:30%;

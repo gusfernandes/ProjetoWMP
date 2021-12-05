@@ -6,6 +6,9 @@ html{
     animation: fadein 0s;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+body{
+    border-radius: 0 0 6px #FFF;
+}
 .bubble {
     position: relative;
     margin-left: 300px;
