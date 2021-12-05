@@ -15,14 +15,14 @@ $email = $saber['usu_name'];
 
 $sql = mysqli_query($connect,"SELECT * FROM chat WHERE para='$login_cookie' and de='$email' or de='$login_cookie' and para='$email'") or die(mysqli_error($connect));
 
-$mysql = "UPDATE mensagens SET `status`=1 WHERE para='$login_cookie' and de='$email'";
-$update = mysqli_query($connect, $mysql);
+$mysql = "UPDATE chat SET `status`=1 WHERE para='$login_cookie' and de='$email'";
+$update = mysqli_query($connect,$mysql);
 
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-
+    <meta http-equiv="refresh" content="5;">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

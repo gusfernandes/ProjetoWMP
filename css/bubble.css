@@ -1,4 +1,9 @@
 html{
+    -webkit-animation: fadein 0s;
+    -moz-animation: fadein 0s;
+    -ms-animation: fadein 0s;
+    -o-animation: fadein 0s;
+    animation: fadein 0s;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .bubble {

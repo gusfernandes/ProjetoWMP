@@ -49,3 +49,7 @@ cursor: pointer;
 .alert-danger{
 width:35%;
 }
+object{
+    width: 635px; 
+    height: 483px;
+}

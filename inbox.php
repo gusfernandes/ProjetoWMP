@@ -22,9 +22,6 @@
     <form action="" method="POST">
     <div class="">
     <?php 
-        if ($contagem<=0) {
-            echo'<h4>Ainda não há conversas!</h4>';
-        }else {
             while($msg=mysqli_fetch_assoc($sql)){
                 $from = $msg["de"];
                 $tudo = mysqli_query($connect,"SELECT * FROM usuario WHERE usu_name='$from'");
@@ -36,7 +33,6 @@
                 <br><p>'.$all["usu_nick"].' - '.$contar.' mensagens novas</p><br>
                 </div></a> <hr>';
             }
-        }
     ?>
 
     </div>

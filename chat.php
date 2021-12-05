@@ -47,7 +47,7 @@
     <form action="" method="POST">
         <div class="form-group">
         <div id="box">
-        <object data="bubble.php?from=<?php echo$id; ?> #bottom" type="text/html"  width="635px" heigth="600px" style="overflow: auto;"></object>
+        <object data="bubble.php?from=<?php echo$id; ?> #bottom" type="text/html" style="overflow: auto;"></object>
         </div>
         <br>
         <div id="send">
