@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Dez-2021 às 18:36
+-- Tempo de geração: 05-Dez-2021 às 08:06
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -44,7 +44,8 @@ CREATE TABLE `chat` (
 INSERT INTO `chat` (`id`, `de`, `para`, `texto`, `imagem`, `data`, `status`) VALUES
 (1, 'ayrton22', 'hitzy', 'ola amigo', '', '2021-12-04', 0),
 (2, 'duduz', 'hitzy', 'carai borracha mano', 'gato.jpg', '2021-12-04', 0),
-(3, 'ayrton22', 'hitzy', 'me responde', '', '2021-12-04', 0);
+(3, 'ayrton22', 'hitzy', 'me responde', '', '2021-12-04', 0),
+(4, 'hitzy', 'ayrton22', 'Oiii', '', '2021-12-05', 0);
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `pubs`
