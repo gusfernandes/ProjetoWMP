@@ -21,6 +21,9 @@
             }
         }
     }
+    if (isset($_POST['cancelar'])) {
+      header("Location: myprofile.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
