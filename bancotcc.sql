@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Dez-2021 às 18:12
+-- Tempo de geração: 06-Dez-2021 às 04:18
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -48,7 +48,10 @@ INSERT INTO `chat` (`id`, `de`, `para`, `texto`, `imagem`, `data`, `status`) VAL
 (4, 'hitzy', 'ayrton22', 'Oiii', '', '2021-12-05', 1),
 (5, 'hitzy', 'ayrton22', 'tudo bem?', '', '2021-12-05', 1),
 (6, 'ayrton22', 'hitzy', 'tudo!!!!', '', '2021-12-05', 1),
-(7, 'yEmerson', 'hitzy', 'Salve mano! Tem vaga pra flex ainda? tenho interesse', '', '2021-12-05', 0);
+(7, 'yEmerson', 'hitzy', 'Salve mano! Tem vaga pra flex ainda? tenho interesse', '', '2021-12-05', 1),
+(8, 'hitzy', 'yEmerson', 'Opa, tenho sim mano!', '', '2021-12-06', 1),
+(9, 'yEmerson', 'hitzy', 'Pode me chamar? nick emersin sou platina 4!', '', '2021-12-06', 1),
+(10, 'hitzy', 'yEmerson', 'pode deixar que vou chamar!', '', '2021-12-06', 1);
 
 -- --------------------------------------------------------
 
@@ -73,18 +76,16 @@ INSERT INTO `pubs` (`id`, `user`, `texto`, `imagem`, `dataa`) VALUES
 (28, 'hitzy', 'Meu deus', '', '2021-11-29'),
 (29, 'hitzy', 'Mano do ceu', '', '2021-11-29'),
 (33, 'hitzy', 'alo\r\n', '', '2021-11-29'),
-(34, 'hitzy', 'Teste daqui', 'image.jpeg', '2021-11-30'),
-(35, 'hitzy', 'Teste sem imagem', '', '2021-11-30'),
-(36, 'ayrton22', 'teste outra conta', '', '2021-11-30'),
 (37, 'hitzy', 'fiz a atividade de bd de hoje!!!!', 'WhatsApp Image 2021-11-30 at 22.20.55.jpeg', '2021-12-02'),
-(38, 'hitzy', 'Teste', '', '2021-12-02'),
 (39, 'hitzy', 'Uai sÃ´', '', '2021-12-02'),
 (40, 'duduz', 'Eita bixo que isso\r\n', '', '2021-12-04'),
 (41, 'ayrton22', 'AlguÃ©m quer jogar algo?', '', '2021-12-05'),
 (42, 'hitzy', 'AlguÃ©m flex lolzinho? to tentando subir de elo, quem quiser manda msg privada!!!', 'lolzinho.png', '2021-12-05'),
 (43, 'yEmerson', 'Oii, sou novo aqui alguÃ©m quer jogar algo? valorant lolzinho ou cs???', '', '2021-12-05'),
 (44, 'Gguiz', 'MINEZADA DOS CRIAS??????????????', '', '2021-12-05'),
-(45, 'mercadalegria', 'O Melhor preÃ§o para os gamers!!!! Venha conhecer!', 'mercado.png', '2021-12-05');
+(45, 'mercadalegria', 'O Melhor preÃ§o para os gamers!!!! Venha conhecer!', 'mercado.png', '2021-12-05'),
+(46, 'hitzy', 'OlÃ¡ mundo!', '', '2021-12-06'),
+(47, 'hitzy', 'Salve salve famÃ­lia, lolzinho???', '', '2021-12-06');
 
 -- --------------------------------------------------------
 
@@ -145,13 +146,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `pubs`
 --
 ALTER TABLE `pubs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
